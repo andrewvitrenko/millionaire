@@ -1,0 +1,31 @@
+@use '../../../global/colors';
+
+.button {
+  color: colors.$white;
+  font-family: inherit;
+  font-size: 1.25rem;
+  padding: 1.25rem 0;
+  width: 18.5rem;
+  background-color: colors.$orange_primary;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  transition: all 0.2s ease-in-out;
+  font-weight: 600;
+
+  &:hover {
+    background-color: colors.$orange_light;
+  }
+
+  &:active {
+    background-color: colors.$orange_dark;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .button {
+    width: 18rem;
+    padding: 1rem 0;
+    font-size: 0.875rem;
+  }
+}
