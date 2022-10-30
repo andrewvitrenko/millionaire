@@ -20,8 +20,12 @@ export const Home: FC = () => {
           <img src={congratulations} alt="greeting hand" />
         </div>
         <div className="home-content">
-          <h1 className="home-title">Who wants to be a millionaire?</h1>
-          <Button text="Start" onClick={handleStartPress} />
+          <div className="home-info">
+            <h1 className="home-title">Who wants to be a millionaire?</h1>
+          </div>
+          <div className="home-actions">
+            <Button text="Start" onClick={handleStartPress} />
+          </div>
         </div>
       </div>
     </div>

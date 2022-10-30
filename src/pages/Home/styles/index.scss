@@ -15,6 +15,7 @@
   max-width: 1280px;
   margin: -3.5rem auto 0;
   column-gap: 2rem;
+  flex-grow: 1;
 }
 
 .home-image-container {
@@ -32,17 +33,23 @@
 .home-title {
   color: colors.$black;
   font-size: 3.5rem;
-  margin-top: 0;
-  margin-bottom: 4rem;
+  margin: 0;
   font-weight: 600;
   max-width: 31.25rem;
   padding-right: 1rem;
 }
 
+.home-actions {
+  margin-top: 4rem;
+}
+
 @media screen and (max-width: 992px) {
   .home-title {
     font-size: 3rem;
-    margin-bottom: 3rem;
+  }
+
+  .home-actions {
+    margin-top: 3rem;
   }
 }
 
