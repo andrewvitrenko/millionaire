@@ -3,7 +3,7 @@ export interface IOption {
   title: string;
 }
 
-export interface IQuestion {
+export interface IConfigQuestion {
   id: number;
   text: string;
   winPrice: number;
@@ -11,6 +11,16 @@ export interface IQuestion {
   answers: IOption[];
 }
 
+export interface IQuestion extends IConfigQuestion {
+  completed: boolean;
+}
+
 export interface IConfig {
+  questions: IQuestion[];
+}
+
+export interface IGameStore {
+  win: number;
+  currentQuestion: IQuestion;
   questions: IQuestion[];
 }
