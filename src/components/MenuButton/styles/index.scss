@@ -4,10 +4,11 @@
   padding: 0.75rem;
   border-radius: 50%;
   transition: all 0.3s ease-in-out;
-  display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  position: absolute;
+  display: none;
 
   &:hover {
     background-color: colors.$grey_faded;
@@ -70,5 +71,21 @@
     & span {
       transform: scale(0);
     }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .menu-button-container {
+    display: flex;
+    top: 2rem;
+    right: 2rem;
+    z-index: 20;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .menu-button-container {
+    top: 0.5rem;
+    right: 0.5rem;
   }
 }
