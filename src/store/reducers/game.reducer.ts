@@ -21,8 +21,9 @@ const gameSlice = createSlice({
       state.questions[index].completed = true;
       state.currentQuestion = state.questions[index + 1];
     },
+    resetGame: () => initialState,
   },
 });
 
-export const { nexQuestion } = gameSlice.actions;
+export const { nexQuestion, resetGame } = gameSlice.actions;
 export const gameReducer = gameSlice.reducer;
