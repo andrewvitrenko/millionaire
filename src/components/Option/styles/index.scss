@@ -38,7 +38,7 @@
   top: 0;
   z-index: 1;
   
-  & path {
+  path {
     fill: colors.$white;
     stroke: colors.$grey;
     transition: all 0.3s ease-in-out;
@@ -64,7 +64,7 @@
 }
 
 .selected {
-  & path {
+  path {
       fill: colors.$orange_faded;
       stroke: colors.$orange_primary;
     }
@@ -76,7 +76,7 @@
 }
 
 .correct {
-  & path {
+  path {
     fill: colors.$green_faded;
     stroke: colors.$green;
   }
@@ -88,7 +88,7 @@
 }
 
 .wrong {
-  & path {
+  path {
     fill: colors.$red_faded;
     stroke: colors.$red;
   }
