@@ -23,7 +23,7 @@
     }
   }
 
-  .completed {
+  &.completed {
     .rate-item-price {
       color: colors.$grey;
     }
