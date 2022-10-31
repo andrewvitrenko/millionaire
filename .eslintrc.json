@@ -1,34 +1,36 @@
 {
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaVersion": 2020,
-        "sourceType": "module"
+    "env": {
+        "browser": true,
+        "es2021": true
     },
     "extends": [
         "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:prettier/recommended",
-        "plugin:react-hooks/recommended"
+        "airbnb",
+        "airbnb-typescript"
     ],
-    "env": {
-        "browser": true,
-        "node": true
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "project": "./tsconfig.json",
+        "ecmaVersion": "latest",
+        "sourceType": "module"
     },
     "plugins": [
-        "@typescript-eslint",
         "react",
-        "prettier"
+        "@typescript-eslint"
     ],
-    "settings": {
-        "react": {
-            "version": "detect"
-        }
-    },
     "rules": {
-        "prettier/prettier": [
-            "error",
+        "import/prefer-default-export": "off",
+        "arrow-body-style": ["error", "as-needed"],
+        "arrow-parens": ["error", "as-needed"],
+        "no-else-return": ["error", { "allowElseIf": true}],
+        "react/function-component-definition": [
+            2,
             {
-                "endOfLine": "auto"
+                "namedComponents": ["arrow-function", "function-declaration"],
+                "unnamedComponents": ["arrow-function", "function-declaration"]
             }
         ]
     }

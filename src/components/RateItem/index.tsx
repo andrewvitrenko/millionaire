@@ -14,7 +14,10 @@ export const RateItem: FC<IRateItemProps> = ({ active, completed, price }) => {
       <div className="rate-item-container">
         <Hexagon className="rate-item-background" />
         <div className="rate-item-content">
-          <span className="rate-item-price">${price.toLocaleString()}</span>
+          <span className="rate-item-price">
+            $
+            {price.toLocaleString()}
+          </span>
         </div>
       </div>
     </div>
