@@ -26,11 +26,11 @@
         "arrow-body-style": ["error", "as-needed"],
         "arrow-parens": ["error", "as-needed"],
         "no-else-return": ["error", { "allowElseIf": true}],
+        "no-param-reassign": "off",
         "react/function-component-definition": [
             2,
             {
-                "namedComponents": ["arrow-function", "function-declaration"],
-                "unnamedComponents": ["arrow-function", "function-declaration"]
+                "namedComponents": "arrow-function"
             }
         ]
     }
