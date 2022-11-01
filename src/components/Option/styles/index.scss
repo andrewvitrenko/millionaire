@@ -14,13 +14,49 @@
 
   &:hover {
     & path {
-        stroke: colors.$orange_primary;
-      }
+      stroke: colors.$orange_primary;
+    }
     
-      &:before,
-      &:after {
-        background-color: colors.$orange_primary;
-      }
+    &:before,
+    &:after {
+      background-color: colors.$orange_primary;
+    }
+  }
+
+  &.selected {
+    path {
+      fill: colors.$orange_faded;
+      stroke: colors.$orange_primary;
+    }
+
+    &:before,
+    &:after {
+      background-color: colors.$orange_primary;
+    }
+  }
+  
+  &.correct {
+    path {
+      fill: colors.$green_faded;
+      stroke: colors.$green;
+    }
+
+    &:before,
+    &:after {
+      background-color: colors.$green;
+    }
+  }
+
+  &.wrong {
+    path {
+      fill: colors.$red_faded;
+      stroke: colors.$red;
+    }
+
+    &:before,
+    &:after {
+      background-color: colors.$red;
+    }
   }
 }
 
@@ -61,42 +97,6 @@
   color: colors.$black;
   font-weight: 400;
   margin-left: 0.5rem;
-}
-
-.selected {
-  path {
-      fill: colors.$orange_faded;
-      stroke: colors.$orange_primary;
-    }
-  
-    &:before,
-    &:after {
-      background-color: colors.$orange_primary;
-    }
-}
-
-.correct {
-  path {
-    fill: colors.$green_faded;
-    stroke: colors.$green;
-  }
-
-  &:before,
-  &:after {
-    background-color: colors.$green;
-  }
-}
-
-.wrong {
-  path {
-    fill: colors.$red_faded;
-    stroke: colors.$red;
-  }
-
-  &:before,
-  &:after {
-    background-color: colors.$red;
-  }
 }
 
 @media screen and (max-width: 768px) {
