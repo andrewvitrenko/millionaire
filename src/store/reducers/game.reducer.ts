@@ -19,8 +19,11 @@ const gameSlice = createSlice({
         item => item.id === state.currentQuestion.id,
       );
       state.questions[index].completed = true;
-      const nextIndex = index === state.questions.length - 1 ? index : index + 1;
-      state.currentQuestion = state.questions[nextIndex];
+      const hasNext = index < state.questions.length - 1;
+
+      if (hasNext) {
+        state.currentQuestion = state.questions[index + 1];
+      }
     },
     resetGame: () => initialState,
   },
