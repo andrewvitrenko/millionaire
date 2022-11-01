@@ -14,12 +14,13 @@ const gameSlice = createSlice({
   initialState,
   reducers: {
     nexQuestion: state => {
-      state.win += state.currentQuestion.winPrice;
+      state.win = state.currentQuestion.winPrice;
       const index = state.questions.findIndex(
         item => item.id === state.currentQuestion.id,
       );
       state.questions[index].completed = true;
-      state.currentQuestion = state.questions[index + 1];
+      const nextIndex = index === state.questions.length - 1 ? index : index + 1;
+      state.currentQuestion = state.questions[nextIndex];
     },
     resetGame: () => initialState,
   },

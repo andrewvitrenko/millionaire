@@ -30,7 +30,12 @@ export const GameOver: FC = () => {
         <div className="game-over-content">
           <div className="game-over-info">
             <p className="game-over-subtitle">Total score:</p>
-            <h1 className="game-over-title">${win || 8000} earned</h1>
+            <h1 className="game-over-title">
+              $
+              {win.toLocaleString()}
+              {' '}
+              earned
+            </h1>
           </div>
           <div className="game-over-actions">
             <Button text="Try again" onClick={handleTryAgainPress} />

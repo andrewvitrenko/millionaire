@@ -4,15 +4,31 @@ import { IOptionProps } from './types';
 import './styles/index.scss';
 
 import { ReactComponent as Hexagon } from '../../assets/images/svg/hexagon.svg';
+import { getOptionClassName } from './helpers';
 
-export const Option: FC<IOptionProps> = ({ option, letter }) => (
-  <div className="option-wrapper">
-    <div className="option-container">
-      <Hexagon className="option-background" />
-      <div className="option-content">
-        <span className="option-letter">{letter}</span>
-        <span className="option-title">{option.title}</span>
+export const Option: FC<IOptionProps> = ({
+  option,
+  letter,
+  correct,
+  onPress,
+  selected,
+  validated,
+}) => {
+  const className = getOptionClassName(selected, correct, validated);
+
+  const handleOptionClick = () => {
+    onPress(option);
+  };
+
+  return (
+    <div className={`option-wrapper ${className}`} onClick={handleOptionClick}>
+      <div className="option-container">
+        <Hexagon className="option-background" />
+        <div className="option-content">
+          <span className="option-letter">{letter}</span>
+          <span className="option-title">{option.title}</span>
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
