@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
 import { IOptionProps } from './types';
+import { getOptionClassName } from './helpers';
 
 import './styles/index.scss';
 
 import { ReactComponent as Hexagon } from '../../assets/images/svg/hexagon.svg';
-import { getOptionClassName } from './helpers';
 
 export const Option: FC<IOptionProps> = ({
   option,
