@@ -5,14 +5,12 @@ import { Home } from './Home';
 import { Game } from './Game';
 import { GameOver } from './GameOver';
 
-export const Router: FC = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path={ROUTES.HOME} element={<Home />} />
-        <Route path={ROUTES.GAME} element={<Game />} />
-        <Route path={ROUTES.GAME_OVER} element={<GameOver />} />
-      </Routes>
-    </BrowserRouter>
-  );
-};
+export const Router: FC = () => (
+  <BrowserRouter>
+    <Routes>
+      <Route path={ROUTES.HOME} element={<Home />} />
+      <Route path={ROUTES.GAME} element={<Game />} />
+      <Route path={ROUTES.GAME_OVER} element={<GameOver />} />
+    </Routes>
+  </BrowserRouter>
+);
